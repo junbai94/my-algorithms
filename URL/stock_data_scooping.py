@@ -47,7 +47,7 @@ def eastmoney_data_scooping(code_list, start_date=None, end_date=None, proxy=Non
         
     for code in code_list:
         code = str(code)
-        if code[0] == '0':
+        if code[0] == '0' or code[0] == '3':
             url = 'http://quotes.money.163.com/service/chddata.html?code=1'+code+'&start='+start_date+'&end='+end_date
         elif code[0] == '6':
             url = 'http://quotes.money.163.com/service/chddata.html?code=0'+code+'&start='+start_date+'&end='+end_date
